@@ -81,6 +81,8 @@ class Admin
         :url,
         :quantity,
         :amount,
+        :receta,
+        :description,
         :category_id
       )
     end
