@@ -1,12 +1,12 @@
 
 
 <div class="row">
-  <div class="col s2">
+  <div class="col s3">
     <ul class="collapsible">
       <li>
         <div class="collapsible-header">
           <div class="col s10">Farmacia</div>
-          <div class="col s2"><i class="material-icons right-align">place</i></div>
+          <div class="col s2"><i class="material-icons right-align">arrow_drop_down</i></div>
         </div>
         <div class="collapsible-body" style="padding: 0 !important">
           <div class="collection">
@@ -19,7 +19,7 @@
       <li>
         <div class="collapsible-header">
           <div class="col s10">Vida Sana</div>
-          <div class="col s2"><i class="material-icons right-align">place</i></div>
+          <div class="col s2"><i class="material-icons right-align">arrow_drop_down</i></div>
         </div>
         <div class="collapsible-body" style="padding: 0 !important">
           <div class="collection">
@@ -33,7 +33,7 @@
       <li>
         <div class="collapsible-header">
           <div class="col s10">Como Comprar</div>
-          <div class="col s2"><i class="material-icons right-align">place</i></div>
+          <div class="col s2"><i class="material-icons right-align">arrow_drop_down</i></div>
         </div>
         <div class="collapsible-body" style="padding: 0 !important">
           <div class="collection">
@@ -45,7 +45,7 @@
       <li>
         <div class="collapsible-header">
           <div class="col s10">Quienes somos</div>
-          <div class="col s2"><i class="material-icons right-align">place</i></div>
+          <div class="col s2"><i class="material-icons right-align">arrow_drop_down</i></div>
         </div>
         <div class="collapsible-body" style="padding: 0 !important">
           <div class="collection">
@@ -57,22 +57,23 @@
       <li>
         <div class="collapsible-header">
           <div class="col s10">Contacto</div>
-          <div class="col s2"><i class="material-icons right-align">place</i></div>
+          <div class="col s2"><i class="material-icons right-align">arrow_drop_down</i></div>
         </div>
         <div class="collapsible-body" style="padding: 0 !important">
-          
+          <p>Direccion: Ejercito Libertador 2120</p>
+          <p>telefono: 9966775569</p>
         </div>
       </li>
     </ul>
   </div>
-  <div class="col s10">  
+  <div class="col s9">  
     <h5>Lista de Productos</h5> 
     <div class="row">
       <% @products.each do |product| %>
-      <div class="col s12 m3">
+      <div class="col s12 m4">
         <div class="card">
           <div class="card-image">
-            <img src=<%= product.url %>>
+            <img class="responsive-img" style="height:200"  src=<%= product.url %>>
           </div>
           <div class="card-content">
             <h6 class="center-align"><%= product.name %></h6>
@@ -92,7 +93,7 @@
             </div>
           </div>
           <div class="card-action center-align">
-            <%= link_to 'Show', product %>
+            <%= link_to "<i class=\"material-icons\">visibility</i>".html_safe, product %>
           </div>
         </div>
       </div>

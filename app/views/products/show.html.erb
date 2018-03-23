@@ -7,7 +7,7 @@
         <strong>Nombre:</strong>
         <%= @product.name %>
       </p>
-      <img src=<%= @product.url %> alt="">
+      <img class="responsive-img"  src=<%= @product.url %> alt="">
     </div>
     <div class="col s6">
       <p>
@@ -26,14 +26,14 @@
           Sin stock
         <% end %>
       </p>
-      <a class="waves-effect waves-light btn"><i class="material-icons right">cloud</i>Agregar al carro</a>
+      <a class="waves-effect waves-light btn"><i class="material-icons right">add_shopping_cart</i>Agregar al carro</a>
     </div>
   </div>
   <div class="row">
     <div class="col s12"></div>
     <strong>Descripción:</strong>
     <p><%= @product.description %></p>
-      <%= link_to 'Back ', products_path,  { :class=>'waves-effect waves-light btn'} %>
+      <%= link_to 'Volver ', products_path,  { :class=>'waves-effect waves-light btn'} %>
   </div>
 </div>
 
