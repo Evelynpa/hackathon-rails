@@ -1,4 +1,5 @@
 Rails.application.configure do
+  config.assets.initialize_on_precompile = false
   # Verifies that versions and hashed value of the package contents in the project's package.json
   config.webpacker.check_yarn_integrity = false
 
