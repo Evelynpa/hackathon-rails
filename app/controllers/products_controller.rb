@@ -4,11 +4,17 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
+    @products = Product.all
+    
     if(params.has_key?(:category_id))
       @products = Product.where({category_id: params['category_id']})
-    else
-      @products = Product.all
     end
+    
+    if(params.has_key?(:search))
+      search = params['search']
+      @products = Product.where("name LIKE ?", "%#{search}%")
+    end
+
     @categories = Category.all
   end
 
